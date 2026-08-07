@@ -221,8 +221,27 @@
     if (!scope) return;
     const buttons = qa(buttonSelector, scope);
     const images = qa(imageSelector, scope);
+    const ringArrow = q('.agentic-arrow-wrap', scope);
+    let currentIndex = 0;
+    let currentRotation = 0;
+    let timer;
+
     const activate = (index) => {
       if (index < 0 || index >= buttons.length) return;
+      
+      // Arrow rotation logic
+      if (ringArrow) {
+          if (index === 0 && currentIndex === buttons.length - 1) {
+              currentRotation += 72;
+          } else if (index === currentIndex + 1) {
+              currentRotation += 72;
+          } else {
+              currentRotation = Math.floor(currentRotation / 360) * 360 + (index * 72);
+          }
+          ringArrow.style.transform = `rotate(${currentRotation}deg)`;
+      }
+      
+      currentIndex = index;
       buttons.forEach((button, i) => {
         const active = i === index;
         button.classList.toggle('is-active', active);
@@ -230,11 +249,24 @@
       });
       images.forEach((image, i) => image.classList.toggle('is-active', i === index));
     };
+
+    const startTimer = () => {
+      clearInterval(timer);
+      if (!reducedMotion && buttons.length > 1) {
+        timer = setInterval(() => activate((currentIndex + 1) % buttons.length), 3000);
+      }
+    };
+
     buttons.forEach((button, i) => {
       const index = indexReader ? indexReader(button, i) : i;
-      ['mouseenter', 'focus', 'click'].forEach((type) => button.addEventListener(type, () => activate(index)));
+      ['click'].forEach((type) => button.addEventListener(type, () => {
+        activate(index);
+        startTimer();
+      }));
     });
+
     activate(Math.max(buttons.findIndex((button) => button.classList.contains('is-active')), 0));
+    startTimer();
   };
 
   qa('[data-service-section]').forEach((scope) => bindSwitcher(
@@ -249,6 +281,14 @@
     '[data-merit-index]',
     '.merit-images img',
     (button) => Number(button.dataset.meritIndex)
+  ));
+
+  
+  qa('[data-agentic-section]').forEach((scope) => bindSwitcher(
+    scope,
+    '.agentic-node',
+    '.agentic-desc-item',
+    (button, i) => i
   ));
 
   qa('[data-interaction]').forEach((scope) => bindSwitcher(
@@ -285,15 +325,15 @@
       if(!reducedMotion) {
         timer = setInterval(() => {
           activate((currentIndex + 1) % buttons.length);
-        }, 4000);
+        }, 3000);
       }
     };
     buttons.forEach((button, i) => button.addEventListener('click', () => {
       activate(i);
       startTimer();
     }));
-    tabs.addEventListener('mouseenter', () => clearInterval(timer));
-    tabs.addEventListener('mouseleave', startTimer);
+    
+    
     activate(Math.max(buttons.findIndex((button) => button.classList.contains('is-active')), 0));
     startTimer();
   });
@@ -373,7 +413,8 @@
       );
     });
 
-    qa('.product-card, .impact-card, .core-grid article, .assessment-pair article, .report-grid article').forEach((item, index) => {
+    
+    qa('.impact-card, .core-grid article, .assessment-pair article, .report-grid article').forEach((item, index) => {
       gsap.from(item, {
         y: 55,
         opacity: 0,
@@ -385,25 +426,11 @@
     });
 
     qa('[data-loop]').forEach((loop) => {
-      gsap.to(loop, { rotation: 10, ease: 'none', scrollTrigger: { trigger: loop, start: 'top bottom', end: 'bottom top', scrub: 1 } });
-      qa('.loop-node', loop).forEach((node) => gsap.to(node, { rotation: -10, ease: 'none', scrollTrigger: { trigger: loop, start: 'top bottom', end: 'bottom top', scrub: 1 } }));
+      gsap.to(loop, { rotation: 45, ease: 'none', scrollTrigger: { trigger: loop, start: 'top bottom', end: 'bottom top', scrub: 1 } });
+      qa('.loop-node', loop).forEach((node) => gsap.to(node, { rotation: -45, ease: 'none', scrollTrigger: { trigger: loop, start: 'top bottom', end: 'bottom top', scrub: 1 } }));
     });
 
-    qa('[data-horizontal]').forEach((wrap) => {
-      const track = q('.horizontal-track', wrap);
-      if (!track || window.innerWidth <= 760) return;
-      const getDistance = () => Math.max(track.scrollWidth - window.innerWidth + parseFloat(getComputedStyle(root).getPropertyValue('--gutter')) * 2, 0);
-      const tween = gsap.to(track, { x: () => -getDistance(), ease: 'none' });
-      window.ScrollTrigger.create({
-        trigger: wrap,
-        start: 'top top',
-        end: () => `+=${getDistance() + window.innerHeight * 0.7}`,
-        pin: true,
-        scrub: 1,
-        animation: tween,
-        invalidateOnRefresh: true
-      });
-    });
+
 
     qa('.hero-media img, .sub-hero-media img, .contact-media img').forEach((image) => {
       gsap.fromTo(image, { scale: 1.08 }, { scale: 1.18, ease: 'none', scrollTrigger: { trigger: image.parentElement, start: 'top top', end: 'bottom top', scrub: true } });
@@ -455,6 +482,6 @@
     const start=()=>{clearInterval(timer);if(reduced)return;timer=setInterval(()=>activate(index+1),3000)};
     const progress=()=>{if(!bar)return;bar.getAnimations().forEach(a=>a.cancel());bar.style.transform='scaleX(0)';if(!reduced)bar.animate([{transform:'scaleX(0)'},{transform:'scaleX(1)'}],{duration:3000,easing:'linear',fill:'forwards'});else bar.style.transform='scaleX(1)'};
     const activate=(i)=>{index=(i+slides.length)%slides.length;slides.forEach((s,n)=>s.classList.toggle('is-active',n===index));dots.forEach((d,n)=>d.classList.toggle('is-active',n===index));if(num)num.textContent=String(index+1).padStart(2,'0');progress();start()};
-    dots.forEach((d,i)=>d.addEventListener('click',()=>activate(i)));scope.addEventListener('mouseenter',()=>clearInterval(timer));scope.addEventListener('mouseleave',start);activate(0);
+    dots.forEach((d,i)=>d.addEventListener('click',()=>activate(i)));activate(0);
   });
 })();
