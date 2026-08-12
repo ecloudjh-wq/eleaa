@@ -1,0 +1,272 @@
+/* Shared footer — based on the Main page footer */
+.elea-shared-footer{
+  height:351px;
+  padding:0;
+  background:#06111B;
+  color:#A4ABB6;
+  position:relative;
+}
+.elea-shared-footer *{box-sizing:border-box}
+.elea-shared-footer a{color:inherit;text-decoration:none}
+.elea-footer-shell{
+  width:1680px;
+  max-width:calc(100% - 240px);
+  margin:0 auto;
+}
+.elea-shared-footer .footer-top{
+  height:120px;
+  padding:0;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  border-bottom:1px solid rgba(255,255,255,.28);
+}
+.elea-shared-footer .company-logo{
+  width:220px;
+  height:28px;
+  overflow:hidden;
+  flex:0 0 auto;
+}
+.elea-shared-footer .company-logo img{
+  display:block;
+  width:220px;
+  height:28px;
+  max-width:none;
+  object-fit:cover;
+}
+.elea-shared-footer .footer-top nav{
+  display:flex;
+  align-items:center;
+  gap:46px;
+  margin:0;
+  color:#fff;
+  font-size:18px;
+  line-height:28px;
+  white-space:nowrap;
+}
+.elea-shared-footer .footer-top nav a{
+  color:#fff;
+  transition:color .2s ease,opacity .2s ease;
+}
+.elea-shared-footer .footer-top nav a:hover{color:#8FE8E9}
+.elea-shared-footer .footer-main{
+  position:relative;
+  height:112px;
+  padding:0;
+}
+.elea-shared-footer .addr{
+  position:absolute;
+  left:0;
+  top:23.8px;
+  color:#A4ABB6;
+  font-size:16px;
+  line-height:28px;
+}
+.elea-shared-footer .policies{
+  position:absolute;
+  left:44%;
+  top:23.8px;
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+  margin:0;
+  color:#8E98A5;
+  font-size:14px;
+  line-height:1.4;
+}
+.elea-shared-footer .policies a{
+  width:max-content;
+  color:#8E98A5;
+  transition:color .2s ease;
+}
+.elea-shared-footer .policies a:hover{color:#8FE8E9}
+.elea-family-wrap{
+  position:absolute;
+  right:0;
+  top:24px;
+  width:242px;
+}
+.elea-family-toggle{
+  width:242px;
+  height:50px;
+  padding:8px 20px;
+  border:1px solid #838383;
+  border-radius:5px;
+  background:transparent;
+  color:#fff;
+  font:inherit;
+  font-size:16px;
+  text-align:left;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  cursor:pointer;
+}
+.elea-family-toggle .chev{
+  display:block;
+  width:16px;
+  height:10px;
+  object-fit:contain;
+  flex:0 0 auto;
+  transform:rotate(0deg);
+  transition:transform .2s ease;
+}
+.elea-family-toggle[aria-expanded="true"] .chev{transform:rotate(180deg)}
+.elea-family-menu{
+  position:absolute;
+  right:0;
+  bottom:calc(100% + 8px);
+  width:242px;
+  padding:6px;
+  border:1px solid rgba(143,232,233,.22);
+  border-radius:9px;
+  background:#0A1D2A;
+  box-shadow:0 16px 42px rgba(0,0,0,.32);
+  opacity:0;
+  visibility:hidden;
+  transform:translateY(8px);
+  transition:opacity .18s ease,transform .18s ease,visibility .18s ease;
+  z-index:80;
+}
+.elea-family-menu.is-open{
+  opacity:1;
+  visibility:visible;
+  transform:translateY(0);
+}
+.elea-family-menu a{
+  display:flex;
+  align-items:center;
+  min-height:42px;
+  padding:0 14px;
+  border-radius:6px;
+  color:#D8E0E7;
+  font-size:14px;
+  line-height:1.4;
+  white-space:nowrap;
+}
+.elea-family-menu a+a{border-top:1px solid rgba(255,255,255,.05)}
+.elea-family-menu a:hover{background:#102A39;color:#8FE8E9}
+.elea-shared-footer .footer-bottom{
+  margin-top:19px;
+  padding:0;
+  color:#71767E;
+  font-size:14px;
+  line-height:1.4;
+}
+
+@media(max-width:1200px){
+  .elea-footer-shell{max-width:calc(100% - 80px)}
+  .elea-shared-footer .footer-top nav{gap:24px;font-size:16px}
+  .elea-shared-footer .policies{left:48%}
+}
+@media(max-width:900px){
+  .elea-shared-footer{height:auto;padding:54px 0 56px}
+  .elea-footer-shell{width:calc(100% - 40px);max-width:none}
+  .elea-shared-footer .footer-top{
+    height:auto;
+    display:block;
+    padding-bottom:34px;
+  }
+  .elea-shared-footer .company-logo{width:220px}
+  .elea-shared-footer .footer-top nav{
+    margin-top:30px;
+    flex-wrap:wrap;
+    gap:20px 34px;
+    font-size:14px;
+  }
+  .elea-shared-footer .footer-main{
+    height:auto;
+    min-height:238px;
+    padding-top:34px;
+  }
+  .elea-shared-footer .addr,
+  .elea-shared-footer .policies,
+  .elea-family-wrap{
+    position:static;
+  }
+  .elea-shared-footer .addr{font-size:14px;line-height:1.7}
+  .elea-shared-footer .policies{margin-top:24px;font-size:14px}
+  .elea-family-wrap{margin-top:24px;width:min(242px,100%)}
+  .elea-family-toggle,.elea-family-menu{width:100%}
+  .elea-family-menu{left:0;right:auto}
+  .elea-shared-footer .footer-bottom{margin-top:38px;font-size:12px}
+}
+@media(max-width:560px){
+  .elea-shared-footer .footer-top nav{gap:16px 24px}
+}
+
+
+/* Shared Top button — fixed after scroll on every page */
+.elea-shared-to-top{
+  display:flex !important;
+  align-items:center;
+  justify-content:center;
+  position:fixed !important;
+  right:28px !important;
+  bottom:28px !important;
+  width:54px;
+  height:54px;
+  padding:0;
+  border:1px solid rgba(143,232,233,.38);
+  border-radius:50%;
+  background:#0b2236;
+  box-shadow:0 10px 28px rgba(0,0,0,.28),0 0 0 1px rgba(48,202,203,.08) inset;
+  cursor:pointer;
+  z-index:9999 !important;
+  opacity:0;
+  visibility:hidden;
+  pointer-events:none;
+  transform:translateY(14px);
+  transition:opacity .28s ease,visibility .28s ease,transform .28s ease,background .22s ease,box-shadow .22s ease;
+}
+.elea-shared-to-top.is-visible{
+  opacity:1;
+  visibility:visible;
+  pointer-events:auto;
+  transform:translateY(0);
+}
+.elea-shared-to-top:hover{
+  transform:translateY(-4px);
+  background:#10304a;
+  box-shadow:0 14px 34px rgba(0,0,0,.34),0 0 0 1px rgba(48,202,203,.16) inset;
+}
+.elea-shared-to-top img{
+  display:block !important;
+  width:22px !important;
+  height:auto !important;
+  object-fit:contain;
+  transform:rotate(180deg);
+  margin:0 !important;
+  opacity:1 !important;
+  visibility:visible !important;
+  pointer-events:none;
+}
+@media(max-width:900px){
+  .elea-shared-to-top{
+    right:18px !important;
+    bottom:18px !important;
+    width:50px;
+    height:50px;
+  }
+  .elea-shared-to-top img{width:20px !important}
+}
+
+/* === Shared footer mobile QC pass === */
+@media(max-width:560px){
+  .elea-shared-footer{padding:42px 0 48px}
+  .elea-footer-shell{width:calc(100% - 40px)}
+  .elea-shared-footer .footer-top{padding-bottom:28px}
+  .elea-shared-footer .company-logo{width:178px;height:auto}
+  .elea-shared-footer .company-logo img{width:178px;height:auto;object-fit:contain}
+  .elea-shared-footer .footer-top nav{display:grid;grid-template-columns:1fr 1fr;gap:12px 18px;margin-top:26px;font-size:13px;line-height:1.5}
+  .elea-shared-footer .footer-main{padding-top:28px;min-height:0}
+  .elea-shared-footer .addr{font-size:13px;line-height:1.65}
+  .elea-shared-footer .policies{margin-top:22px;font-size:13px;gap:7px}
+  .elea-family-wrap{width:100%!important;max-width:none!important;margin-top:28px}
+  .elea-family-toggle{width:100%!important;height:50px;padding:0 18px;font-size:14px}
+  .elea-family-menu{left:0!important;right:auto!important;bottom:calc(100% + 8px)!important;width:100%!important;max-width:none!important;border-radius:9px;padding:5px}
+  .elea-family-menu a{min-height:44px;padding:0 14px;font-size:13px}
+  .elea-shared-footer .footer-bottom{margin-top:32px;font-size:11px;line-height:1.45}
+  .elea-shared-to-top{right:12px!important;bottom:16px!important;width:46px;height:46px}
+  .elea-shared-to-top img{width:18px!important}
+}

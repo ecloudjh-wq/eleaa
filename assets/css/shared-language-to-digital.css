@@ -1,0 +1,146 @@
+/* Shared: FROM LANGUAGE AI TO DIGITAL HUMAN — Main is the single source of truth */
+.shared-language-tech{padding:100px 0 125px;background:#f2f8f8;font-family:Pretendard,"Noto Sans KR",Arial,sans-serif;color:#151515}
+.shared-language-tech .section-shell{width:min(calc(100% - 256px),1792px);margin:0 auto}
+.shared-language-tech .technology-head{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:84px}
+.shared-language-tech .technology-head .eyebrow{margin:0 0 10px;color:#24B3B3;font-family:Poppins,Pretendard,sans-serif;font-size:22px;font-weight:600;line-height:1.35;letter-spacing:.01em}
+.shared-language-tech .technology-head h2{font-size:52px;line-height:1.35;letter-spacing:-.04em;margin:0;font-weight:700}
+.shared-language-tech .under-link{display:inline-flex;gap:18px;align-items:center;margin:0 10px 12px 0;font-size:15px;color:#171717;text-decoration:none;white-space:nowrap}
+.shared-language-tech .figma-cta-arrow{display:block;width:60.5px;height:5px;max-width:none;flex:0 0 auto;transition:transform .42s cubic-bezier(.22,1,.36,1);will-change:transform}
+.shared-language-tech .figma-arrow-link:hover .figma-cta-arrow,.shared-language-tech .figma-arrow-link:focus-visible .figma-cta-arrow{transform:translateX(12px)}
+.shared-language-tech .technology-panel{position:relative;width:100%;height:540px;border-radius:30px;overflow:hidden;background:#07131e}
+.shared-language-tech .technology-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.shared-language-tech .technology-columns{position:relative;z-index:1;display:grid;grid-template-columns:repeat(3,1fr);height:100%}
+.shared-language-tech .technology-item{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:#fff;padding:0 40px;min-width:0}
+.shared-language-tech .technology-item:not(:last-child){border-right:1px solid rgba(208,214,225,.85)}
+.shared-language-tech .technology-icon-glass{position:relative;width:72px;height:72px;display:grid;place-items:center;margin:0 0 18px;border-radius:15px;overflow:hidden;background:linear-gradient(145deg,rgba(20,45,70,.68),rgba(7,25,45,.42));border:1px solid rgba(148,207,236,.30);box-shadow:inset 0 1px 0 rgba(255,255,255,.12),0 10px 30px rgba(0,0,0,.25),0 0 22px rgba(49,184,226,.10);backdrop-filter:blur(12px) saturate(120%);-webkit-backdrop-filter:blur(12px) saturate(120%)}
+.shared-language-tech .technology-icon-glass::before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.14),transparent 42%,rgba(50,202,203,.10));pointer-events:none}
+.shared-language-tech .technology-icon{position:relative;z-index:1;width:42px;height:42px;object-fit:contain;border-radius:0;margin:0;filter:drop-shadow(0 3px 7px rgba(0,0,0,.28))}
+.shared-language-tech .technology-item h3{font-size:36px;line-height:1.5;font-weight:700;margin:0;color:#fff;white-space:nowrap}
+.shared-language-tech .technology-item p{font-size:18px;line-height:1.5;font-weight:400;margin:9px 0 0;color:#fff;white-space:nowrap}
+
+@media (min-width:1201px){
+  .shared-language-tech{padding:100px 0 125px;background:#EBF3F3}
+  .shared-language-tech .section-shell{width:1680px;max-width:calc(100% - 240px)}
+  .shared-language-tech .technology-head{margin:0 0 80px;align-items:flex-end}
+  .shared-language-tech .technology-head .eyebrow{font-size:24px;line-height:1.2;font-weight:500}
+  .shared-language-tech .technology-head h2{font-size:60px;line-height:1.3;letter-spacing:0;font-weight:700}
+  .shared-language-tech .technology-head .under-link{margin:0 10px 6px 0}
+  .shared-language-tech .technology-panel{height:540px;border-radius:30px}
+}
+@media (max-width:1200px){
+  .shared-language-tech .section-shell{width:calc(100% - 80px)}
+  .shared-language-tech .technology-panel{height:auto;min-height:520px}
+  .shared-language-tech .technology-item{padding:40px 22px}
+  .shared-language-tech .technology-item h3{font-size:28px;white-space:normal}
+  .shared-language-tech .technology-item p{font-size:16px;white-space:normal}
+}
+@media (max-width:900px){
+  .shared-language-tech{padding:90px 0}
+  .shared-language-tech .section-shell{width:calc(100% - 40px)}
+  .shared-language-tech .technology-head{display:block;margin-bottom:48px}
+  .shared-language-tech .technology-head h2{font-size:36px;line-height:1.35;letter-spacing:-.02em}
+  .shared-language-tech .technology-head .under-link{margin-top:24px}
+  .shared-language-tech .technology-panel{min-height:0;background:#07131e;border-radius:22px}
+  .shared-language-tech .technology-bg{position:absolute;height:100%}
+  .shared-language-tech .technology-columns{grid-template-columns:1fr}
+  .shared-language-tech .technology-item{min-height:260px;border-right:0!important;border-bottom:1px solid rgba(208,214,225,.65)}
+  .shared-language-tech .technology-item:last-child{border-bottom:0}
+  .shared-language-tech .technology-icon-glass{width:68px;height:68px;border-radius:14px;margin-bottom:16px}
+  .shared-language-tech .technology-icon{width:42px;height:42px}
+}
+@media (max-width:560px){
+  .shared-language-tech{padding:76px 0}
+  .shared-language-tech .technology-head .eyebrow{font-size:15px;margin-bottom:12px}
+  .shared-language-tech .technology-head h2{font-size:31px}
+  .shared-language-tech .technology-item{min-height:230px;padding:32px 20px}
+  .shared-language-tech .technology-item h3{font-size:25px}
+  .shared-language-tech .technology-item p{font-size:14px;line-height:1.55}
+  .shared-language-tech .technology-icon-glass{width:64px;height:64px}
+  .shared-language-tech .technology-icon{width:42px;height:42px}
+}
+@media (prefers-reduced-motion:reduce){.shared-language-tech .figma-cta-arrow{transition:none!important;transform:none!important}}
+
+/* Main/Data Moat shared technology section — mobile QC */
+@media (max-width:560px){
+  .shared-language-tech{padding:64px 0 70px}
+  .shared-language-tech .section-shell{width:calc(100% - 40px)}
+  .shared-language-tech .technology-head{margin-bottom:34px}
+  .shared-language-tech .technology-head .eyebrow{font-size:14px;line-height:1.35;margin-bottom:10px}
+  .shared-language-tech .technology-head h2{font-size:29px;line-height:1.35;letter-spacing:-.02em}
+  .shared-language-tech .technology-head .under-link{margin-top:20px;font-size:14px}
+  .shared-language-tech .technology-panel{border-radius:18px}
+  .shared-language-tech .technology-item{min-height:190px;padding:26px 18px}
+  .shared-language-tech .technology-icon-glass{width:58px;height:58px;border-radius:13px;margin-bottom:12px}
+  .shared-language-tech .technology-icon{width:42px;height:42px}
+  .shared-language-tech .technology-item h3{font-size:22px;line-height:1.35}
+  .shared-language-tech .technology-item p{font-size:13px;line-height:1.55;margin-top:7px}
+}
+
+/* 2026-08-11 requested fixed technology icon sizing */
+.shared-language-tech .technology-icon-glass{
+  width:58px;
+  height:58px;
+}
+.shared-language-tech .technology-icon{
+  width:42px;
+  height:42px;
+}
+
+/* 2026-08-12 mobile FROM LANGUAGE AI TO DIGITAL HUMAN cleanup */
+@media (max-width:560px){
+  /* Keep Main/Data Moat background framing identical */
+  .shared-language-tech .technology-panel{
+    width:100%!important;
+    min-height:570px!important;
+    height:auto!important;
+    overflow:hidden!important;
+  }
+  .shared-language-tech .technology-bg{
+    position:absolute!important;
+    inset:0!important;
+    width:100%!important;
+    height:100%!important;
+    max-width:none!important;
+    object-fit:cover!important;
+    object-position:center center!important;
+    transform:none!important;
+    filter:none!important;
+  }
+
+  /* No blur / translucent plate behind technology copy */
+  .shared-language-tech .technology-item,
+  .shared-language-tech .technology-item-model,
+  .shared-language-tech .technology-item h3,
+  .shared-language-tech .technology-item p{
+    background:transparent!important;
+    backdrop-filter:none!important;
+    -webkit-backdrop-filter:none!important;
+    filter:none!important;
+    box-shadow:none!important;
+  }
+}
+
+
+/* 2026-08-12 desktop text containment: allow copy to grow downward instead of crossing columns */
+@media (min-width:761px){
+  .shared-language-tech .technology-item{
+    min-width:0;
+    overflow:hidden;
+    padding-left:34px;
+    padding-right:34px;
+  }
+  .shared-language-tech .technology-item h3,
+  .shared-language-tech .technology-item p{
+    width:100%;
+    max-width:100%;
+    white-space:normal!important;
+    overflow-wrap:break-word;
+    word-break:normal;
+  }
+  .shared-language-tech .technology-item h3{
+    text-wrap:balance;
+  }
+  .shared-language-tech .technology-item p{
+    text-wrap:pretty;
+  }
+}
