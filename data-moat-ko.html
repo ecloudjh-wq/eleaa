@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="ELEA Data Moat - Figma 808:4014 implementation" name="description"/>
+<title>ELEA — Data Moat</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable-dynamic-subset.css" rel="stylesheet"/>
+<link href="./css/data-moat.css?v=20260812-fixed-image" rel="stylesheet"/>
+<link href="./assets/css/shared-header.css?v=20260812-pcfix" rel="stylesheet">
+<link href="./assets/css/shared-footer.css" rel="stylesheet">
+<link href="./assets/css/policy-modal.css" rel="stylesheet"/>
+<link href="./assets/css/mobile-qc-full.css?v=20260812-v4" rel="stylesheet"/>
+<style id="data-moat-mobile-header-hardfix">
+@media (max-width:760px){
+  body .site-header .header-inner{display:flex!important;grid-template-columns:none!important}
+  body .site-header .header-tools{display:flex!important;margin-left:auto!important;gap:12px!important;opacity:1!important;visibility:visible!important}
+  body .site-header .language-switch{display:flex!important;color:#0b2027!important;opacity:1!important;visibility:visible!important}
+  body .site-header .mobile-toggle{display:block!important;color:#0b2027!important;opacity:1!important;visibility:visible!important}
+}
+@media (min-width:761px){
+  body .site-header,
+  body .site-header.is-light,
+  body .site-header.is-scrolled,
+  body .site-header.is-hidden{
+    background:rgba(255,255,255,.96)!important;
+    color:#0b2027!important;
+    transform:none!important;
+    opacity:1!important;
+    visibility:visible!important;
+  }
+  body .site-header .header-inner{
+    display:flex!important;
+    grid-template-columns:none!important;
+    width:100%!important;
+  }
+  body .site-header .gnb{
+    display:flex!important;
+    position:absolute!important;
+    left:50%!important;
+    top:50%!important;
+    transform:translate(-50%,-50%)!important;
+    align-items:center!important;
+    flex-direction:row!important;
+    opacity:1!important;
+    visibility:visible!important;
+    pointer-events:auto!important;
+    color:#0b2027!important;
+  }
+  body .site-header .gnb a{
+    display:block!important;
+    color:#0b2027!important;
+    opacity:1!important;
+    visibility:visible!important;
+  }
+  body .site-header .header-tools{
+    display:flex!important;
+    margin-left:auto!important;
+    align-items:center!important;
+    opacity:1!important;
+    visibility:visible!important;
+  }
+  body .site-header .language-switch{
+    display:flex!important;
+    color:#0b2027!important;
+    opacity:1!important;
+    visibility:visible!important;
+  }
+  body .site-header .mobile-toggle{display:none!important}
+}
+</style>
+</link></link></head>
+<body>
+<div aria-hidden="true" class="scroll-progress"><span></span></div>
+<header class="site-header is-light" data-header="">
+<div class="header-inner">
+<a aria-label="ELEA 메인" class="brand" href="index-ko.html"><img alt="ELEA" src="https://www.figma.com/api/mcp/asset/15104890-ed0b-410e-95eb-d73ea76f69df.svg"/></a>
+<nav aria-label="주요 메뉴" class="gnb"><a href="index-ko.html">Main</a><a class="is-active" href="data-moat-ko.html">Data Moat</a><a href="digital-human-ko.html">Digital Human</a><a href="learning-experience-ko.html">Learning Experience</a></nav>
+<div class="header-tools">
+<div aria-label="언어 선택" class="language-switch"><a aria-current="true" class="lang-option is-active" href="data-moat-ko.html">KOR</a><span class="lang-separator">|</span><a class="lang-option" href="data-moat.html">ENG</a></div>
+<button aria-expanded="false" aria-label="메뉴 열기" class="mobile-toggle" type="button"><span></span><span></span><span></span></button>
+</div>
+</div>
+</header>
+<div aria-hidden="true" class="shared-header-spacer"></div>
+<main>
+<section class="intro section-pad" id="data-moat">
+<div class="page-shell intro-grid">
+<div class="intro-media reveal">
+<img alt="AI processor board" src="https://www.figma.com/api/mcp/asset/f84d641d-79c3-4d93-b805-ac9852f72060.png"/>
+</div>
+<div class="intro-copy reveal delay-1">
+<div class="intro-top">
+<p class="eyebrow">Data Moat</p>
+<h1>아이를 이해하는 AI는<br/>아이의 언어에서 시작됩니다</h1>
+<a class="view-more" href="#why-child-data">View More <img alt="" src="https://www.figma.com/api/mcp/asset/243f20c7-f1ec-40a7-aad7-2f090ce5e106.svg"/></a>
+</div>
+<div class="metrics-grid">
+<article class="metric-card metric-a">
+<img alt="" src="https://www.figma.com/api/mcp/asset/b65990d8-99d3-44e5-a96d-09de3d4f33a3.svg"/>
+<strong>380만 건+</strong>
+<p>누적 아동 학습 데이터</p>
+</article>
+<article class="metric-card metric-b">
+<img alt="" src="https://www.figma.com/api/mcp/asset/4eefffc6-461f-4b9f-998f-38257125764b.svg"/>
+<strong>50만 건+</strong>
+<p>월간 신규 유입 데이터</p>
+</article>
+<article class="metric-card metric-c">
+<img alt="" src="https://www.figma.com/api/mcp/asset/c13ccfb4-c13c-4b8a-befc-ecf2209c14dd.svg"/>
+<strong>5-13 years</strong>
+<p>비원어민 아동 학습 데이터</p>
+</article>
+</div>
+</div>
+</div>
+</section>
+<section class="why-child" id="why-child-data">
+<div aria-hidden="true" class="why-bg"></div>
+<div aria-hidden="true" class="why-overlay"></div>
+<div class="page-shell why-inner reveal">
+<div class="center-heading">
+<p class="eyebrow light">Why Child Data Matters</p>
+<h2>아동을 위한 AI에서 가장 어려운 것은,<br/>아이를 이해하는 일입니다.</h2>
+<p class="body-copy light-copy">아동의 언어는 성인의 언어와 다릅니다.<br/>아이들은 다르게 발음하고, 다르게 틀리고,다르게 망설이며, 다르게 반응합니다.<br/><br/>특히 비원어민 아동의 영어 발화는<br/>일반 음성 데이터나 성인 중심의 언어 데이터만으로 정확하게 이해하기 어렵습니다.</p>
+</div>
+<div aria-label="Child data categories" class="why-tabs" data-autoplay-tabs="" data-interval="3000" role="tablist">
+<button aria-selected="true" class="why-tab active" role="tab" type="button">
+<strong>Speech &amp; Pronunciation</strong>
+<span>발화와 발음</span>
+<small>아동 특유의 발음과 유창성, 머뭇거림과 반복 패턴</small>
+</button>
+<button aria-selected="false" class="why-tab" role="tab" type="button">
+<strong>Writing &amp; Sentence</strong>
+<span>쓰기와 문장</span>
+<small>문장 구성과 철자, 문법 학습 단계별 오류 패턴</small>
+</button>
+<button aria-selected="false" class="why-tab" role="tab" type="button">
+<strong>Learning Response</strong>
+<span>반응과 학습 흐름</span>
+<small>교재·레벨·학습 목표에 따른 응답과 피드백 데이터</small>
+</button>
+</div>
+</div>
+</section>
+<section class="language-data section-pad soft" id="digital-human">
+<div class="page-shell language-grid">
+<div class="language-intro reveal">
+<p class="eyebrow">Non-Native Children’s Language Data</p>
+<h2>희소한 비원어민<br/>아동 언어<br/>학습 데이터</h2>
+<p class="body-copy">ELEA는<br/>실제 교육 현장에서 축적된<br/>5~13세 비원어민 아동의<br/>발화·쓰기·오류·반응 데이터를 기반으로 합니다.<br/><br/>단순한 음성 기록이 아니라,<br/>교재와 레벨, 학습 목표와 수업 단계가 연결된<br/>실제 학습 맥락의 언어 데이터를 축적합니다.</p>
+</div>
+<div class="data-rows reveal delay-1">
+<article class="data-row">
+<div><h3>아동 발화 데이터</h3><p>아동 특유의 발음과<br/>유창성, 머뭇거림과 반복 발화</p></div>
+<strong class="flow-gradient-text"><span data-text="Child">Child</span><span data-text="Speech Data">Speech Data</span></strong>
+</article>
+<article class="data-row">
+<div><h3>아동 쓰기 데이터</h3><p>문장 구성과 철자·문법,<br/>학습 단계별 쓰기 오류</p></div>
+<strong class="flow-gradient-text"><span data-text="Writing Data">Writing Data</span></strong>
+</article>
+<article class="data-row">
+<div><h3>오류와 반응 패턴</h3><p>오답, 재시도, 자기 수정,<br/>질문 유형별 응답 흐름</p></div>
+<strong class="flow-gradient-text"><span data-text="Error &amp; Response">Error &amp; Response</span><span data-text="Patterns">Patterns</span></strong>
+</article>
+<article class="data-row">
+<div><h3>학습 맥락 데이터</h3><p>교재, 레벨, 수업 단계,<br/>질문 유형과 학습 목표</p></div>
+<strong class="flow-gradient-text"><span data-text="Learning Context">Learning Context</span></strong>
+</article>
+</div>
+</div>
+</section>
+<section class="data-elm section-pad" id="learning-experience">
+<div class="page-shell">
+<div class="section-heading reveal">
+<p class="eyebrow">Data to ELM</p>
+<h2>아동 언어 데이터가 ELM이 되기까지</h2>
+<p class="body-copy">데이터를 보유하는 것을 넘어, 실제 학습 경험으로 전환합니다.<br/>축적된 아동 언어 데이터는 ELM과 평가 엔진의 고도화로 이어지고,<br/>더 정교한 상호작용과 학습 피드백으로 제품에 반영됩니다.</p>
+</div>
+<div class="elm-grid reveal delay-1">
+<div class="accordion" data-accordion="">
+<article class="accordion-item active">
+<button type="button"><span>CHILD LANGUAGE DATA</span><img alt="" src="https://www.figma.com/api/mcp/asset/50a24e4c-32db-4d14-bd14-f4910998a81a.svg"/></button>
+<div class="accordion-panel"><p>발화·쓰기·오류·반응</p></div>
+</article>
+<article class="accordion-item">
+<button type="button"><span>PATTERN ANALYSIS</span><img alt="" src="https://www.figma.com/api/mcp/asset/50a24e4c-32db-4d14-bd14-f4910998a81a.svg"/></button>
+<div class="accordion-panel"><p>아동의 언어·오류·반응 패턴 분석</p></div>
+</article>
+<article class="accordion-item">
+<button type="button"><span>ELM : E Cloud AI Language Model</span><img alt="" src="https://www.figma.com/api/mcp/asset/50a24e4c-32db-4d14-bd14-f4910998a81a.svg"/></button>
+<div class="accordion-panel"><p>아동 특화 언어 모델 및 평가 엔진 고도화</p></div>
+</article>
+<article class="accordion-item">
+<button type="button"><span>LEARNING EXPERIENCE</span><img alt="" src="https://www.figma.com/api/mcp/asset/50a24e4c-32db-4d14-bd14-f4910998a81a.svg"/></button>
+<div class="accordion-panel"><p>더 정교한 상호작용과 학습 피드백으로 연결</p></div>
+</article>
+</div>
+<div class="elm-image">
+<img alt="Data flowing into AI system" src="https://www.figma.com/api/mcp/asset/a9d27173-da38-4b32-a61b-ae6103e8ff1b.png"/>
+</div>
+</div>
+</div>
+</section>
+<section class="loop-section section-pad">
+<div class="page-shell loop-grid">
+<div aria-label="Child-specific learning loop diagram" class="loop-visual reveal">
+<img alt="" class="loop-ring" src="https://www.figma.com/api/mcp/asset/d16bd50c-3905-4e3c-8d5f-b95d554337f5.svg"/>
+<div class="loop-center"><span>CHILD-SPECIFIC</span><strong>LEARNING<br/>LOOP</strong></div>
+<div class="orbit"><img alt="" src="https://www.figma.com/api/mcp/asset/1a028a75-0a4b-41b1-915f-fc4dcf7d1184.svg"/></div>
+<button class="loop-node active node-1" data-step="0" type="button"><b>1</b><span>Classroom<br/>Interaction</span></button>
+<button class="loop-node node-2" data-step="1" type="button"><b>2</b><span>Data<br/>Processing</span></button>
+<button class="loop-node node-3" data-step="2" type="button"><b>3</b><span>ELM &amp; Engine<br/>Improvement</span></button>
+<button class="loop-node node-4" data-step="3" type="button"><b>4</b><span>Vaildation &amp;<br/>Deployment</span></button>
+<button class="loop-node node-5" data-step="4" type="button"><b>5</b><span>New Learning<br/>Signals</span></button>
+</div>
+<div class="loop-copy reveal delay-1">
+<p class="eyebrow light">Data Improvement Loop</p>
+<h2>학습할수록 더욱 정교해지는<br/>데이터 선순환</h2>
+<p class="body-copy loop-body">실제 교육 현장에서 축적된 데이터는<br/>ELM과 평가 엔진의 고도화로 이어지고,<br/><br/>검증과 제품 반영을 거쳐<br/>다시 더 나은 학습 경험과 새로운 데이터로 연결됩니다.</p>
+</div>
+</div>
+</section>
+</main>
+<footer class="footer elea-shared-footer" id="sharedFooter"></footer>
+<script src="./js/data-moat.js?v=20260812-fixed-image"></script>
+<script src="./assets/js/shared-header.js?v=20260812-pcfix"></script>
+<script src="./assets/js/shared-footer.js"></script>
+<script src="./assets/js/policy-modal.js"></script>
+</body>
+</html>
