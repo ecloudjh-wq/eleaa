@@ -416,6 +416,6 @@
     transform-origin:center center!important;
   }
   body .elm-rise-layer-main .elm-layer-core{
-    top:5%!important;
+    top:0%!important;
   }
 }
